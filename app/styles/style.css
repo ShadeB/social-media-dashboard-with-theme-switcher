@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+button {
+  outline: none;
+  border: none; }
+
+body {
+  background-color: white; }
+
+/*# sourceMappingURL=style.css.map */
