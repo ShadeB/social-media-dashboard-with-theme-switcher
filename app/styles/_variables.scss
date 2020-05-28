@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$font-styles: 'Inter', sans-serif;
+$font-weights: (
+	'regular': 400,
+	'bold': 700
+);
+$overview-card-heading: 14px;
+
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$facebook-accent-blue: hsl(195, 100%, 50%);
+$twitter-accent-blue: hsl(203, 89%, 53%);
+$instagram-accent: linear-gradient(hsl(27, 97%, 70%) to hsl(329, 70%, 58%));
+$youtube-accent: hsl(348, 97%, 39%);
+
+$toggle-light: hsl(230, 22%, 74%);
+$bg-white: hsl(0, 0%, 100%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$light-grayish-blue: hsl(227, 47%, 96%);
+$dark-grayish-blue: hsl(228, 12%, 44%);
+$very-dark-blue: hsl(230, 17%, 14%);
+
+$toggle-dark: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
