@@ -1,0 +1,30 @@
+{
+	"name": "social-media-dashboard-with-theme-switcher",
+	"version": "1.0.0",
+	"description": "Front end mentor challenge for social media dashboard with a theme switcher",
+	"main": "app/index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ShadeB/social-media-dashboard-with-theme-switcher.git"
+	},
+	"keywords": [
+		"theme-switcher"
+	],
+	"author": "Shade banda",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ShadeB/social-media-dashboard-with-theme-switcher/issues"
+	},
+	"homepage": "https://github.com/ShadeB/social-media-dashboard-with-theme-switcher#readme",
+	"devDependencies": {
+		"autoprefixer": "^9.8.0",
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^2.6.5"
+	}
+}
