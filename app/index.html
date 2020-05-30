@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,131 +14,277 @@
 	</head>
 	<body>
 		<main>
-			<header>
+			<header class="header">
 				<div class="container content">
 					<div class="page__title">
-						<h1>social media dashboard</h1>
+						<h1 class="heading">social media dashboard</h1>
 						<p>Total followers: 23,004</p>
 					</div>
-					<div class="toggle__container">
+					<div class="darkmode__container">
 						<span>Dark mode</span>
-						<input type="checkbox" name="" id="toggle" />
-						<label for="toggle"></label>
+						<div class="toggle__container">
+							<input type="checkbox" name="toggle" id="toggle" />
+							<label for="toggle">Toggle</label>
+						</div>
 					</div>
 				</div>
 			</header>
 
 			<section>
 				<div class="container content">
-					<article>
-						<header>
-							<h2><span>1987</span>followers</h2>
-						</header>
-						<div class="handle__container">
-							<div class="social-icon__container">
-								<img src="./images/icon-facebook.svg" alt="Facebook logo" />
-							</div>
+					<div class="card__holder">
+						<article class="card followers__card card-accent--facebook">
+							<header>
+								<h2 class="heading">1987<span>followers</span></h2>
+							</header>
 							<div class="handle__container">
-								<p>@nathanf</p>
+								<div class="social-icon__container">
+									<img src="./images/icon-facebook.svg" alt="Facebook logo" />
+								</div>
+								<div class="social-media__handle">
+									<p>@nathanf</p>
+								</div>
 							</div>
-						</div>
-						<div class="follower-stats__container">
-							<div class="stats-arrow__up">
-								<img src="./images/icon-up.svg" alt="up arrow icon" />
+							<div class="follower-stats__container">
+								<div class="stats-arrow">
+									<img src="./images/icon-up.svg" alt="up arrow icon" />
+								</div>
+								<div class="stats stats__up">
+									<p>12 today</p>
+								</div>
 							</div>
-							<div class="stats">
-								<p>12 today</p>
-							</div>
-						</div>
-					</article>
+						</article>
 
-					<article>
-						<header>
-							<h2><span>1044</span>followers</h2>
-						</header>
-						<div class="handle__container">
-							<div class="social-icon__container">
-								<img src="./images/icon-twitter.svg" alt="Twitter logo" />
-							</div>
+						<article class="card followers__card card-accent--twitter">
+							<header>
+								<h2 class="heading">1044<span>followers</span></h2>
+							</header>
 							<div class="handle__container">
-								<p>@nathanf</p>
+								<div class="social-icon__container">
+									<img src="./images/icon-twitter.svg" alt="Twitter logo" />
+								</div>
+								<div class="social-media__handle">
+									<p>@nathanf</p>
+								</div>
 							</div>
-						</div>
-						<div class="follower-stats__container">
-							<div class="stats-arrow__up">
-								<img src="./images/icon-up.svg" alt="up arrow icon" />
+							<div class="follower-stats__container">
+								<div class="stats-arrow">
+									<img src="./images/icon-up.svg" alt="up arrow icon" />
+								</div>
+								<div class="stats stats__up">
+									<p>99 today</p>
+								</div>
 							</div>
-							<div class="stats">
-								<p>99 today</p>
-							</div>
-						</div>
-					</article>
+						</article>
 
-					<article>
-						<header>
-							<h2><span>11k</span>followers</h2>
-						</header>
-						<div class="handle__container">
-							<div class="social-icon__container">
-								<img src="./images/icon-instagram.svg" alt="Instagram logo" />
-							</div>
+						<article class="card followers__card card-accent--instagram">
+							<header>
+								<h2 class="heading">11k<span>followers</span></h2>
+							</header>
 							<div class="handle__container">
-								<p>@realnathanf</p>
+								<div class="social-icon__container">
+									<img src="./images/icon-instagram.svg" alt="Instagram logo" />
+								</div>
+								<div class="social-media__handle">
+									<p>@realnathanf</p>
+								</div>
 							</div>
-						</div>
-						<div class="follower-stats__container">
-							<div class="stats-arrow__up">
-								<img src="./images/icon-up.svg" alt="up arrow icon" />
+							<div class="follower-stats__container">
+								<div class="stats-arrow">
+									<img src="./images/icon-up.svg" alt="up arrow icon" />
+								</div>
+								<div class="stats stats__up">
+									<p>1099 today</p>
+								</div>
 							</div>
-							<div class="stats">
-								<p>1099 today</p>
-							</div>
-						</div>
-					</article>
+						</article>
 
-					<article>
-						<header>
-							<h2><span>8239</span>followers</h2>
-						</header>
-						<div class="handle__container">
-							<div class="social-icon__container">
-								<img src="./images/icon-facebook.svg" alt="Facebook logo" />
-							</div>
+						<article class="card followers__card card-accent--youtube">
+							<header>
+								<h2 class="heading">8239<span>subscribers</span></h2>
+							</header>
 							<div class="handle__container">
-								<p>Nathan F.</p>
+								<div class="social-icon__container">
+									<img src="./images/icon-youtube.svg" alt="Facebook logo" />
+								</div>
+								<div class="social-media__handle">
+									<p>Nathan F.</p>
+								</div>
 							</div>
-						</div>
-						<div class="follower-stats__container">
-							<div class="stats-arrow__down">
-								<img src="./images/icon-down.svg" alt="down arrow icon" />
+							<div class="follower-stats__container">
+								<div class="stats-arrow">
+									<img src="./images/icon-down.svg" alt="down arrow icon" />
+								</div>
+								<div class="stats stats__down">
+									<p>144 today</p>
+								</div>
 							</div>
-							<div class="stats">
-								<p>144 today</p>
-							</div>
-						</div>
-					</article>
+						</article>
+					</div>
 				</div>
 			</section>
 
 			<section>
 				<div class="container content">
-					<h2>Overview - Today</h2>
-					<article>
-						<header>
-							<h2>page views</h2>
-							<span>87</span>
-						</header>
-						<div class="follower-stats__container">
-							<div class="stats-arrow__down">
-								<img src="./images/icon-down.svg" alt="down arrow icon" />
+					<h2 class="overview-main__heading">Overview - Today</h2>
+
+					<div class="card__holder">
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">87 <span>page views</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-facebook.svg" alt="Facebook logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__up">
+										<img src="./images/icon-up.svg" alt="down arrow icon" />
+									</div>
+									<div class="stats stats__up">
+										<p>3%</p>
+									</div>
+								</div>
 							</div>
-							<div class="stats">
-								<p>144 today</p>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">52 <span>likes</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-facebook.svg" alt="Facebook logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__down">
+										<img src="./images/icon-down.svg" alt="down arrow icon" />
+									</div>
+									<div class="stats stats__down">
+										<p>2%</p>
+									</div>
+								</div>
 							</div>
-						</div>
-					</article>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">5462 <span>likes</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-instagram.svg" alt="Instagram logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__up">
+										<img src="./images/icon-up.svg" alt="up arrow icon" />
+									</div>
+									<div class="stats stats__up">
+										<p>2257%</p>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">52k <span>profile views</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-instagram.svg" alt="Instagram logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__up">
+										<img src="./images/icon-up.svg" alt="up arrow icon" />
+									</div>
+									<div class="stats stats__up">
+										<p>1375%</p>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">117 <span>retweets</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-twitter.svg" alt="Twitter logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__up">
+										<img src="./images/icon-up.svg" alt="up arrow icon" />
+									</div>
+									<div class="stats stats__up">
+										<p>303%</p>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">507 <span>likes</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-twitter.svg" alt="Twitter logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__up">
+										<img src="./images/icon-up.svg" alt="up arrow icon" />
+									</div>
+									<div class="stats stats__up">
+										<p>553%</p>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">107 <span>likes</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-youtube.svg" alt="Youtube logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__down">
+										<img src="./images/icon-down.svg" alt="down arrow icon" />
+									</div>
+									<div class="stats stats__down">
+										<p>19%</p>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="card overview__card">
+							<header>
+								<h2 class="heading">1407 <span>total views</span></h2>
+							</header>
+							<div class="overview__stats">
+								<div class="social-icon__container">
+									<img src="./images/icon-youtube.svg" alt="Youtube logo" />
+								</div>
+								<div class="follower-stats__container">
+									<div class="stats-arrow stats-arrow__down">
+										<img src="./images/icon-down.svg" alt="down arrow icon" />
+									</div>
+									<div class="stats stats__down">
+										<p>12%</p>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
 				</div>
 			</section>
 		</main>
+
+		<script src="./main.js"></script>
 	</body>
 </html>
