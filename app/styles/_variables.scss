@@ -1,24 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-$font-styles: 'Inter', sans-serif;
+$font-family: 'Inter', sans-serif;
 $font-weights: (
 	'regular': 400,
 	'bold': 700
 );
+
+@function font-weights($weight-name) {
+	@return map-get($font-weights, $weight-name);
+}
+
+@mixin flexJustify($justify) {
+	display: flex;
+	justify-content: $justify;
+	align-items: center;
+}
+
+@mixin mediaQuery($screen-size) {
+	@media screen and (min-width: $screen-size) {
+		@content;
+	}
+}
+
+$Tablet: 768px;
+
 $overview-card-heading: 14px;
 
 $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
 $facebook-accent-blue: hsl(195, 100%, 50%);
 $twitter-accent-blue: hsl(203, 89%, 53%);
-$instagram-accent: linear-gradient(hsl(27, 97%, 70%) to hsl(329, 70%, 58%));
+$instagram-accent: linear-gradient(hsl(27, 97%, 70%), hsl(329, 70%, 58%));
 $youtube-accent: hsl(348, 97%, 39%);
 
+/* Light mode colors*/
 $toggle-light: hsl(230, 22%, 74%);
-$bg-white: hsl(0, 0%, 100%);
+$white: hsl(0, 0%, 100%);
 $very-pale-blue: hsl(225, 100%, 98%);
 $light-grayish-blue: hsl(227, 47%, 96%);
 $dark-grayish-blue: hsl(228, 12%, 44%);
 $very-dark-blue: hsl(230, 17%, 14%);
 
-$toggle-dark: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+$toggle-dark: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+/* Dark mode colors */
+$darker-blue: hsl(232, 19%, 15%);
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+$desaturated-blue: hsl(228, 34%, 66%);
