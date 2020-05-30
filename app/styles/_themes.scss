@@ -1,0 +1,48 @@
+$bg-color: 'bg-color';
+$Top-bg-pattern: 'Top-bg-pattern';
+$card-bg: 'card-bg';
+$primary-text-color: 'primary-text-color';
+$secondary-text-color: 'secondary-text-color';
+$section-heading-color: 'section-heading-color';
+
+$themes: (
+	light: (
+		bg-color: $white,
+		Top-bg-pattern: $very-pale-blue,
+		card-bg: $light-grayish-blue,
+		primary-text-color: $dark-grayish-blue,
+		secondary-text-color: $very-dark-blue,
+		section-heading-color: $dark-grayish-blue
+	),
+	dark: (
+		bg-color: $very-dark-blue,
+		Top-bg-pattern: $darker-blue,
+		card-bg: $dark-desaturated-blue,
+		primary-text-color: $desaturated-blue,
+		secondary-text-color: $white,
+		section-heading-color: $white
+	)
+);
+
+@mixin themed() {
+	@each $theme, $map in $themes {
+		html[data-theme='#{$theme}'] & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge(
+					$theme-map,
+					(
+						$key: $value
+					)
+				) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function themify($key) {
+	@return map-get($theme-map, $key);
+}
