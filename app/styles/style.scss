@@ -1,6 +1,287 @@
 @import './resets';
 @import './variables';
+@import './themes';
 
 body {
-	background-color: $bg-white;
+	font-size: 1.6rem;
+	font-weight: font-weights(regular);
+	font-family: $font-family;
+	@include themed() {
+		background-color: themify($bg-color);
+		color: themify($primary-text-color);
+	}
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.content {
+	padding: 2.6rem;
+}
+
+header {
+	text-transform: capitalize;
+}
+
+.header {
+	border-radius: 0 0 2.7rem 2.7rem;
+	font-weight: font-weights(bold);
+	margin-bottom: -10rem;
+	@include themed() {
+		background-color: themify($card-bg);
+		color: themify($primary-text-color);
+	}
+
+	@include mediaQuery($Tablet) {
+		padding-bottom: 6rem;
+	}
+
+	&__container {
+		@include mediaQuery($Tablet) {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(25rem, 29rem));
+			justify-content: center;
+			column-gap: 2rem;
+			row-gap: 2rem;
+		}
+
+		.page__title {
+			@include mediaQuery($Tablet) {
+				padding: 2rem 0;
+				grid-column: 1 / span 1;
+				::after {
+					opacity: 0;
+				}
+			}
+		}
+
+		.darkmode__container {
+			@include mediaQuery($Tablet) {
+				grid-column: 2 / span 1;
+				justify-content: flex-end;
+				span {
+					margin-right: 2rem;
+				}
+			}
+		}
+	}
+}
+
+.page__title {
+	padding: 2.5rem 0;
+	position: relative;
+
+	.heading {
+		font-size: 2.5rem;
+	}
+
+	p {
+		margin-top: 1rem;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-color: $very-dark-blue;
+		height: 0.1rem;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+.heading {
+	@include themed() {
+		color: themify('secondary-text-color');
+	}
+}
+
+.darkmode__container {
+	padding: 2rem 0 7rem 0;
+	@include flexJustify(space-between);
+
+	.toggle__container {
+		overflow: hidden;
+		display: flex;
+		input[type='checkbox'] {
+			opacity: 0;
+			height: 0;
+			width: 0;
+
+			&:checked + label {
+				background: $toggle-dark;
+				&::after {
+					transform: translateX(2.5rem);
+				}
+			}
+		}
+
+		label {
+			cursor: pointer;
+			display: flex;
+			width: 5.5rem;
+			height: 3rem;
+			background-color: $toggle-light;
+			position: relative;
+			border-radius: 5rem;
+			text-indent: 999.9rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0.5rem;
+				left: 0.6rem;
+				width: 2rem;
+				height: 2rem;
+				background-color: white;
+				border-radius: 5rem;
+				transition: cubic-bezier(0.3, -0.55, 0.17, 1) 250ms;
+			}
+		}
+	}
+}
+
+.card__holder {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 29rem));
+	justify-content: center;
+	column-gap: 2rem;
+	row-gap: 2rem;
+
+	.overview-main__heading {
+		grid-column: 1 / -1;
+	}
+}
+
+.card {
+	border-radius: 1rem;
+	@include themed {
+		background-color: themify($card-bg);
+	}
+
+	.follower-stats__container {
+		display: flex;
+		justify-content: center;
+		.stats-arrow {
+			img {
+				transform: translateY(-0.5rem);
+			}
+		}
+		.stats {
+			margin-left: 0.5rem;
+			p {
+				font-weight: font-weights(bold);
+				font-size: 1.3rem;
+			}
+
+			&__up {
+				p {
+					color: $lime-green;
+				}
+			}
+
+			&__down {
+				p {
+					color: $bright-red;
+				}
+			}
+		}
+	}
+}
+
+.followers__card {
+	&.card-accent--facebook::before {
+		background-color: $facebook-accent-blue;
+	}
+
+	&.card-accent--twitter::before {
+		background-color: $twitter-accent-blue;
+	}
+
+	&.card-accent--instagram::before {
+		background: $instagram-accent;
+	}
+
+	&.card-accent--youtube::before {
+		background-color: $youtube-accent;
+	}
+	text-align: center;
+	padding: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 0.5rem;
+		right: 0;
+		top: 0;
+		height: 0.7rem;
+	}
+
+	.heading {
+		margin: 2rem 0;
+		font-size: 5rem;
+		text-transform: uppercase;
+		span {
+			display: block;
+			font-size: 1.9rem;
+			font-weight: font-weights(regular);
+			color: $dark-grayish-blue;
+		}
+	}
+
+	.handle__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		order: -1;
+		margin-top: 1rem;
+
+		.social-media__handle {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.overview-main__heading {
+	font-size: 2.5rem;
+	margin-bottom: 3rem;
+	@include themed() {
+		color: themify($section-heading-color);
+	}
+}
+
+.overview__card {
+	padding: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	header {
+		.heading {
+			font-size: 3.2rem;
+			display: flex;
+			flex-direction: column-reverse;
+			span {
+				margin-bottom: 3rem;
+				font-size: 1.4rem;
+				@include themed() {
+					color: $dark-grayish-blue;
+				}
+			}
+		}
+	}
+
+	.overview__stats {
+		.social-icon__container {
+			text-align: right;
+			margin-bottom: 4rem;
+		}
+	}
 }
